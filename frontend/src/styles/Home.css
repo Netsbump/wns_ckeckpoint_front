@@ -1,0 +1,210 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.add-country-form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-country-form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Styles pour le sélecteur d'emoji */
+.emoji-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.emoji-input-container input {
+  flex: 1;
+}
+
+.emoji-selector-button {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+}
+
+.emoji-selector-button:hover {
+  background-color: #ddd;
+}
+
+.emoji-selector {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 250px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  z-index: 100;
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.emoji-option {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.emoji-option:hover {
+  background-color: #f0f0f0;
+}
+
+button {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #e03a75;
+}
+
+.countries-list h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.country-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.country-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.country-flag {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.country-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .country-cards {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .country-flag {
+    font-size: 40px;
+  }
+  
+  .country-name {
+    font-size: 16px;
+  }
+
+  .emoji-selector {
+    width: 200px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.form-group.has-error input,
+.form-group.has-error select {
+  border-color: #ff0033;
+  background-color: #fff0f0;
+}
+
+.error-message {
+  color: #ff0033;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.api-error {
+  background-color: #ffe0e0;
+  border: 1px solid #ff0033;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #ff0033;
+  font-weight: 500;
+}
+
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #ff0033;
+  background-color: #fff0f0;
+  border-radius: 4px;
+} 
